@@ -2,7 +2,7 @@ body {
     font: 20px "Gill Sans", Verdana, sans-serif;
     line-height: 1.8;
     color: #000000;
-    background-color: #80bfff;
+    background-color: #F2D7BF;
     padding-top: 0px !important;
   }
 
@@ -23,7 +23,7 @@ a {
 }
 
 nav {
-  background-color: #3399ff;
+  background-color: #633F20;
   color: #EEE7E8;
   padding: 50px 0px;
 }
@@ -37,7 +37,7 @@ nav {
 .nav-title{
   margin-left: 15px;
   margin-right: 15px;
-  color: #000000;
+  color: #E5DF35;
 }
 
 .nav-link {
