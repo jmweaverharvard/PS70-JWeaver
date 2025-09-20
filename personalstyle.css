@@ -13,6 +13,7 @@
     padding-left: 10px;
     overflow: auto;
     font-size: larger;
+    font-weight: bold;
 }
 
 .button {
@@ -51,7 +52,37 @@
 
 .main {
     flex: 1;
+    margin-left: 300px;
     /* padding: 20px; */
+}
+
+.bodytext {
+    overflow: auto;
+    color: black;
+    font-size: larger;
+}
+
+.bodytext2 {
+    overflow: auto;
+    color: black;
+    font-size: larger;
+    background-color: burlywood;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: justify;
+}
+
+.section {
+    background-color: rgb(9, 106, 15);
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 4px;
+    display: inline-block;
+    color: gold;
 }
 
 .sidebartext {
@@ -89,6 +120,9 @@
     background-image: url('./Images/Parchment.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 /* (74, 48, 27) */
 .webbar {
