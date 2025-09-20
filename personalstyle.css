@@ -27,15 +27,21 @@
 
 .image {
     border: 2px solid black;
-    width: 360px;
-    height: 280px;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    box-sizing: border-box;
 }
 
 .sidebar {
     background-color:#5e2b19;
     border: 3px solid black;
-    overflow: hidden;
-    width: 300px;
+    height: 100vh;
+    padding:20x;
+    top: 0; 
+    left: 0;
+    width: 285px;
+    position: fixed;
     float: left;
 }
 
@@ -69,7 +75,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 1fr);
 }
 .grid > div {
   background-color: #5e2b19;
