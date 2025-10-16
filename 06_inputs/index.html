@@ -1,39 +1,55 @@
+<!-- FOR BLANK ASSIGNMENT PAGES -->
 <!DOCTYPE html>
-<html lang="en">
+<head>
 
-<title>PS70: Intro to Digital Fabrication </title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../style.css" rel="stylesheet">
+<title>Grid Page</title>
+<link rel="stylesheet" href="../personalstyle.css">
+<!--favicon--> 
+<link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+</head>
 
-
-<nav class="navbar navbar-expand-sm navbar-dark" style=" color: #EEE7E8;">
-  <div style="align-items: center; justify-content: center;" class="container-fluid">
-    <div class="flexrow">
-      <h2 class="nav-title">PS70 Fall 2024</h2>
-    </div>
-    <div class="navbar-nav">
-      <h4><a class="nav-link" href="../index.html">Home</a></h4>
-      <h4><a class="nav-link" href="../about.html">About</a></h4>
-    </div>
-  </div>
-</nav>
-
-<body>
-<xmp style="display:none;">
-<div class="textcontainer">
-<p class="margin">   </p>
-
-<h3>Week 6: Electronic Inputs</h3>
-
-<h4>Assignment 1: Capactive Sensor<h4>
-
-<h4>Assignment 2: [Use + Calibrate Another Sensor]</h4>
-
+<body class="background">
+<div class="webbar" style="margin-left: 300px;">
+    <h1 style="text-align: left;">Electronic Inputs</h1>
 </div>
-</xmp>
-</body>
 
-<script src="../strapdown.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
-
-</html>
+<!-- SIDEBAR -->
+<div class="container">
+    <div class="sidebar">
+            <a class="sidebartext" href="../index.html">Home</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../01_intro/index.html">Week 1: Final Project Ideas</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../02_2Ddesign/index.html">Week 2: Introduction to 2D Fabrication</a>
+            <hr style="color: black; border: 1px solid black;"> 
+            <a class="sidebartext" href="../03_fabrication/index.html">Week 3: Fabrication/Mechanical Design</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../04_microcontroller/index.html">Week 4: Microcontroller Programming</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../05_3Ddesign/index.html">Week 5: 3D Design and Scanning</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../06_inputs/index.html">Week 6: Electronic Input Devices</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../07_outputs/index.html">Week 7: Electronic Output Devices</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../08_cnc/index.html">Week 8: CNC, Molding and Casting</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../09_networking/index.html">Week 9: Wired, Radio, WiFi, Bluetooth</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../10_machine/index.html">Week 10: Machine Building</a>
+            <hr style="color: black; border: 1px solid black;">
+            <img style="width: 250px; height: auto; margin: 15px;border: 3px solid black;" src="../Images/Ajanta2.png" alt="Ajanta" >
+</div>
+<!-- END SIDEBAR -->   
+<div class="main">
+  <h2 class="section">Building the Capacitive Sensor</h2><br>
+  <img class="image" src="./capacitor1.jpg" style="border-radius: 5px;display: flex;">
+  <p class="bodytext2">For my sensor, I chose to measure force and touch. The set up for this kind of sensor is quite simple. As with any capacitive sensor, you need two sections of (in our case) copper which will generate the electric field between themselves. For this, I prepared by simply attaching the copper to wooden sticks so that they would have some stability. Next, I attached the alligator clips to the copper on one end, and to the pin end of pin-socket wires on the other. The socket side would attach to the A3 and tx-rx pins of Arduino.</p>
+  <br><hr>
+  <img class="image" src="./capacitor2.jpg" style="border-radius: 5px;display: block;">
+  <p class="bodytext2">At this point, all of the components of the sensor are set up; they just need to be arranged into a productive system. Because I want to measure force, there needs to be some object in between the two plates that creates a distance which can be lessened with pressure. The solution is again, quite simple, and involves simply placing some foam between the two plates and taping them together so that their distance (and thus capacity) doesn't change too much without input. The total sensor, attached to the arduino board, can be seen below.</p>
+  <img class="image" src="./capacitor3.jpg" style="border-radius: 5px;display: block;">
+  <br><hr>
+  <h2 class="section">Graphing the Outputs</h2><br>
+  <img class="image" src="./Graph.png" style="border-radius: 5px;display: block;">
+  <p class="bodytext2">Having built the sensor, we now need to calibrate it and understand (abstractly, at least) the values it's producing and what can be done with them. For this, I borrowed the tx_rx code posted on the website and uploaded it to my esp32 dev board. This program outputs a (rather abstract) indication of the total capacity in between the two parallel plates by outputting a number that grows larger as the capacitance does. Fortunately, all seems to be working well, and the capacitance grows when one presses on the sensor, thereby pushing the plates closer together. As one would expect, the graph is nonlinear, with the change in capacitance relative to the change in distance decreasing with each iteration. Put more simply, capacitance increases less as the plates are pushed closer to each other; the biggest increases occur at the beginning.</p>
