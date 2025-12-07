@@ -1,40 +1,56 @@
+<!-- FOR BLANK ASSIGNMENT PAGES -->
 <!DOCTYPE html>
-<html lang="en">
+<head>
 
-<title>PS70: Intro to Digital Fabrication </title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../style.css" rel="stylesheet">
+<title>Grid Page</title>
+<link rel="stylesheet" href="../personalstyle.css">
+<!--favicon--> 
+<link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+</head>
 
-
-<nav class="navbar navbar-expand-sm navbar-dark" style="color: #EEE7E8;">
-  <div style="align-items: center; justify-content: center;" class="container-fluid">
-    <div class="flexrow">
-      <h2 class="nav-title">PS70 Fall 2024</h2>
-    </div>
-    <div class="navbar-nav">
-      <h4><a class="nav-link" href="../index.html">Home</a></h4>
-      <h4><a class="nav-link" href="../about.html">About</a></h4>
-    </div>
-  </div>
-</nav>
-
-<body>
-<xmp style="display:none;">
-<div class="textcontainer">
-<p class="margin">   </p>
-
-<h3>Week 3: Hand Tools and Fabrication</h3>
-
-<h4>Kinetic Sculpture</h4>
-
-
-
-
+<body class="background">
+<div class="webbar" style="margin-left: 300px;">
+    <h1 style="text-align: left;">KINETIC SCULPTURE</h1>
 </div>
-</xmp>
-</body>
 
-<script src="../strapdown.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
-
-</html>
+<!-- SIDEBAR -->
+<div class="container">
+    <div class="sidebar">
+            <a class="sidebartext" href="../index.html">Home</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../01_intro/index.html">Week 1: Final Project Ideas</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../02_2Ddesign/index.html">Week 2: Introduction to 2D Fabrication</a>
+            <hr style="color: black; border: 1px solid black;"> 
+            <a class="sidebartext" href="../03_fabrication/index.html">Week 3: Fabrication/Mechanical Design</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../04_microcontroller/index.html">Week 4: Microcontroller Programming</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../05_3Ddesign/index.html">Week 5: 3D Design and Scanning</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../06_inputs/index.html">Week 6: Electronic Input Devices</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../07_outputs/index.html">Week 7: Electronic Output Devices</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../08_cnc/index.html">Week 8: CNC, Molding and Casting</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../09_networking/index.html">Week 9: Wired, Radio, WiFi, Bluetooth</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../10_machine/index.html">Week 10: Machine Building</a>
+            <hr style="color: black; border: 1px solid black;">
+            <img style="width: 250px; height: auto; margin: 15px;border: 3px solid black;" src="../Images/Ajanta2.png" alt="Ajanta" >
+</div>
+<!-- END SIDEBAR -->   
+<div class="main">
+  <h2 class="section">THE IDEA</h2><br>
+  <img class="image" src="../Images/DT240.jpg" style="float: left; border-radius: 5px;">
+  <p class="bodytext2">There is a famous image of Śiva dancing in South Asian art in which he is represented as surrounded by a circle of fire. These sculptures are meant to convey the dyanmism of his dance, leveraging the flames to convey a sense of active destruction and outward emanation of the deity's power. As they're often cast in bronze, these sculptures are, unsurprisingly, entirely static in the literal sense. However, given how strongly they're meant to imply movement, I thought it would be fun to imagine it as a kinetic sculpture in which the fire actually moves. How does this change the aesthetic effect of the image, by actually having it in motion rather than imagining it so?<br><br>The most challenging part of this project was just figuring out how to arrange each of the parts in a manner that's physically possible. The circle of flames is not attached to Śiva, meaning the two had to be separate parts. Further, they both needed to be elevated so as to not get stuck on the ground surface of wherever the sculpture is placed. Most of the problems were with the circle - it needs to attach to a motor in the center, but in most configurations, the spokes of the 'wheel' it creates would crash into whatever platform I placed it on. To solve this, I created two separate platforms: one for Śiva, and another for the motor and its wheel of flame. The motor was placed on the edge of its own platform and projected the wheel outward, which hovered over empty space between the two platforms.</p>
+  <br><hr>
+  <h2 class="section">THE DESIGN</h2><br>
+  <img class="image" src="../Images/Nataraja-hindu-light-photoshopped.png" style="float: left; border-radius: 5px;">
+  <p class="bodytext2">To create the design for the laser-cutter, rather than making it by hand in Fusion (doubtless a herculean task given how detailed Śiva is), I instead found an openlicense lineart of the deity opened it in Photoshop to detached the circle from Śiva. Having done so, I uploaded it to Illustrator and vectorized it. Finally, I uploaded to Fusion and cleaned it up so that it would only lasercut the outline of each part of the image.I resized the circle and deity to my desired dimensions (circle ~6in in diamter, deity ~4in in height), produced the platform, and prepared to cut it using cardboard.  </p>
+  <br><br><br><br><br><br><br><br><br><hr>
+  <h2 class="section">FINAL PRODUCT</h2><br>
+  <video controls>
+    <source src="../Images/20251005_121403.mp4" type="video/mp4">
+</div>
