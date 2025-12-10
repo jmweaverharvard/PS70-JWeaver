@@ -1,40 +1,56 @@
+<!-- FOR BLANK ASSIGNMENT PAGES -->
 <!DOCTYPE html>
-<html lang="en">
+<head>
 
-<title>PS70: Intro to Digital Fabrication </title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../style.css" rel="stylesheet">
+<title>Grid Page</title>
+<link rel="stylesheet" href="../personalstyle.css">
+<!--favicon--> 
+<link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+</head>
 
-
-<nav class="navbar navbar-expand-sm navbar-dark" style=" color: #EEE7E8;">
-  <div style="align-items: center; justify-content: center;" class="container-fluid">
-    <div class="flexrow">
-      <h2 class="nav-title">PS70 Fall 2024</h2>
-    </div>
-    <div class="navbar-nav">
-      <h4><a class="nav-link" href="../index.html">Home</a></h4>
-      <h4><a class="nav-link" href="../about.html">About</a></h4>
-    </div>
-  </div>
-</nav>
-
-<body>
-<xmp style="display:none;">
-<div class="textcontainer">
-<p class="margin">   </p>
-
-<h3>Week 7: Electronic Outputs</h3>
-
-
-
-<h4>Assignment: Minimum Viable Product for Final Project</h4>
-
-
+<body class="background">
+<div class="webbar" style="margin-left: 300px;">
+    <h1 style="text-align: left;">Minimum Viable Product</h1>
 </div>
-</xmp>
-</body>
 
-<script src="../strapdown.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
-
-</html>
+<!-- SIDEBAR -->
+<div class="container">
+    <div class="sidebar">
+            <a class="sidebartext" href="../index.html">Home</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../01_intro/index.html">Week 1: Final Project Ideas</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../02_2Ddesign/index.html">Week 2: Introduction to 2D Fabrication</a>
+            <hr style="color: black; border: 1px solid black;"> 
+            <a class="sidebartext" href="../03_fabrication/index.html">Week 3: Fabrication/Mechanical Design</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../04_microcontroller/index.html">Week 4: Microcontroller Programming</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../05_3Ddesign/index.html">Week 5: 3D Design and Scanning</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../06_inputs/index.html">Week 6: Electronic Input Devices</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../07_outputs/index.html">Week 7: Electronic Output Devices</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../08_cnc/index.html">Week 8: CNC, Molding and Casting</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../09_networking/index.html">Week 9: Wired, Radio, WiFi, Bluetooth</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../10_machine/index.html">Week 10: Machine Building</a>
+            <hr style="color: black; border: 1px solid black;">
+            <img style="width: 250px; height: auto; margin: 15px;border: 3px solid black;" src="../Images/Ajanta2.png" alt="Ajanta" >
+</div>
+<!-- END SIDEBAR -->   
+<div class="main">
+  <h2 class="section">Goals</h2><br>
+  <p class="bodytext2">Going into MVP week, I decided to focus on displaying images on a screen and swap between them using buttons, as this is both the most essential function of the exhibition and also the most challenging. It involves fairly complex circuitry, many different components (including a screen, arduino, and SD card), and to my untrained humanities mind, involved programming. The focus is on developing an iterable framework that I can easily add more functions to later on: namely, the ability to add more images.</p>
+  <br><hr>
+  <h2 class="section">The Code</h2>
+  <embed src="../ButtonImageCode.txt" style="width: 1000px;height: 400px;background-color:rgba(255, 200, 133, 0.999);border-radius: 5px;border-color: black;border-width: 2px;display: block;">
+  <p class="bodytext2">I found a lot of robust documentation for jpeg decoding and image display online and borrowed heavily from github repos hosted by XTronical. It still took a considerable amount of work to get the wiring right and resolves all of the difficulties in communication between the SD card and the screen. I found that the SD card and the display weren't able to communicate properly if they were on the same channel of the Arduino, a fact I only discovered after substantial debugging time and the help of Bobby (thanks Bobby). I modified the code I pulled to work on different channels, fit with my specific board, and then integrated the button inputs. </p>
+  <br><hr>
+  <h2 class="section">The Product</h2><br>
+  <img class="image" src="../Images/MVP1.jpg" style="border-radius: 5px;">
+  <img class="image" src="../Images/MVP2.jpg"style="border-radius: 5px;">
+  <p class="bodytext2">At last, the screen is working! I can easily swap between images and add more using the remaining 6 pins on my arduino dev board. I also prototyped an enclosure which houses the screen at the front alongside several buttons to swap between images. Going forward, however, I'm interested in instead placing the buttons in front of where the sculptures would be in the cave temple. </p>
+  <embed src="../Images/MVP3.mp4" width="500 px" height="800px">

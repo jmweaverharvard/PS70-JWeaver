@@ -1,41 +1,52 @@
+<!-- FOR BLANK ASSIGNMENT PAGES -->
 <!DOCTYPE html>
-<html lang="en">
+<head>
 
-<title>PS70: Intro to Digital Fabrication </title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../style.css" rel="stylesheet">
+<title>Grid Page</title>
+<link rel="stylesheet" href="../personalstyle.css">
+<!--favicon--> 
+<link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+</head>
 
-
-<nav class="navbar navbar-expand-sm navbar-dark" style=" color: #EEE7E8;">
-  <div style="align-items: center; justify-content: center;" class="container-fluid">
-    <div class="flexrow">
-      <h2 class="nav-title">PS70 Fall 2024</h2>
-    </div>
-    <div class="navbar-nav">
-      <h4><a class="nav-link" href="../index.html">Home</a></h4>
-      <h4><a class="nav-link" href="../about.html">About</a></h4>
-    </div>
-  </div>
-</nav>
-
-<body>
-<xmp style="display:none;">
-<div class="textcontainer">
-<p class="margin">   </p>
-
-<h3>Week 4: Microcontroller Programming</h3>
-
-<h4>[Do Something with an arduino]</h4>
-
-
-
-
-
+<body class="background">
+<div class="webbar" style="margin-left: 300px;">
+    <h1 style="text-align: left;">Arduino Programming</h1>
 </div>
-</xmp>
-</body>
 
-<script src="../strapdown.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
-
-</html>
+<!-- SIDEBAR -->
+<div class="container">
+    <div class="sidebar">
+            <a class="sidebartext" href="../index.html">Home</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../01_intro/index.html">Week 1: Final Project Ideas</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../02_2Ddesign/index.html">Week 2: Introduction to 2D Fabrication</a>
+            <hr style="color: black; border: 1px solid black;"> 
+            <a class="sidebartext" href="../03_fabrication/index.html">Week 3: Fabrication/Mechanical Design</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../04_microcontroller/index.html">Week 4: Microcontroller Programming</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../05_3Ddesign/index.html">Week 5: 3D Design and Scanning</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../06_inputs/index.html">Week 6: Electronic Input Devices</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../07_outputs/index.html">Week 7: Electronic Output Devices</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../08_cnc/index.html">Week 8: CNC, Molding and Casting</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../09_networking/index.html">Week 9: Wired, Radio, WiFi, Bluetooth</a>
+            <hr style="color: black; border: 1px solid black;">
+            <a class="sidebartext" href="../10_machine/index.html">Week 10: Machine Building</a>
+            <hr style="color: black; border: 1px solid black;">
+            <img style="width: 250px; height: auto; margin: 15px;border: 3px solid black;" src="../Images/Ajanta2.png" alt="Ajanta" >
+</div>
+<!-- END SIDEBAR -->   
+<div class="main">
+  <h2 class="section">The Program</h2><br>
+  <embed src="../ButtonImageCode.txt" style="width: 1000px;height: 400px;background-color:rgba(255, 200, 133, 0.999);border-radius: 5px;border-color: black;border-width: 2px;display: block;">
+  <p class="bodytext2">My introduction to programming for this class was a veritable trial by fire as I started with the code for my MVP. As detailed in my MVP page, the goal was to create a framework for displaying images from an SD card that could be iterated upon and added to in later development steps. The input involves a button which users press to active the output, an image displayed on a tft spi screen. I pulled much of the framework for the jpeg display from a github repository and edited it to accomodate the fact that the SD card and TFT display couldn't communicate simultaneously on the same channel as well as adding the buttons. The button code is fairly simple: a digital pin is attached to the output of the button so that when it is pressed down, it receives a signal which tells it to display an image from the SD card.</p>
+  <h2 class="section">The Circuitry</h2>
+  <img src="../Images/CircuitDiagram.png" style="display: block;border-radius: 5px;border: 2px solid black;" width="1000px" height="500px">
+  <p class="bodytext2">Expertly crafted in Microsoft Paint.</p>
+  <h2 class="section">The Product</h2>\
+  <embed src="../Images/MVP3.mp4" width="500 px" height="800px" style="display: block;">
